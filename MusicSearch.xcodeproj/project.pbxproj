@@ -13,6 +13,8 @@
 		155F8D852AF4C13400802E80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155F8D842AF4C13400802E80 /* Preview Assets.xcassets */; };
 		155F8D8D2AF4C35900802E80 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 155F8D8C2AF4C35900802E80 /* ComposableArchitecture */; };
 		155F8D902AF4C76800802E80 /* ItunesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F8D8F2AF4C76800802E80 /* ItunesClient.swift */; };
+		155F8D942AF617D300802E80 /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F8D932AF617D300802E80 /* ArtistDetailView.swift */; };
+		155F8D972AF64AAA00802E80 /* ArtistSearchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F8D962AF64AAA00802E80 /* ArtistSearchRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		155F8D842AF4C13400802E80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		155F8D8F2AF4C76800802E80 /* ItunesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesClient.swift; sourceTree = "<group>"; };
 		155F8D912AF5097600802E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		155F8D932AF617D300802E80 /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
+		155F8D962AF64AAA00802E80 /* ArtistSearchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,10 @@
 			children = (
 				155F8D912AF5097600802E80 /* Info.plist */,
 				155F8D7D2AF4C13300802E80 /* MusicSearchApp.swift */,
-				155F8D8F2AF4C76800802E80 /* ItunesClient.swift */,
-				155F8D8E2AF4C4BA00802E80 /* Search */,
 				155F8D812AF4C13400802E80 /* Assets.xcassets */,
+				155F8D952AF620C800802E80 /* ArtistDetail */,
+				155F8D8E2AF4C4BA00802E80 /* ArtistSearch */,
+				155F8D922AF6179900802E80 /* Client */,
 				155F8D832AF4C13400802E80 /* Preview Content */,
 			);
 			path = MusicSearch;
@@ -74,12 +79,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		155F8D8E2AF4C4BA00802E80 /* Search */ = {
+		155F8D8E2AF4C4BA00802E80 /* ArtistSearch */ = {
 			isa = PBXGroup;
 			children = (
 				155F8D7F2AF4C13300802E80 /* ArtistSearchView.swift */,
+				155F8D962AF64AAA00802E80 /* ArtistSearchRow.swift */,
 			);
-			path = Search;
+			path = ArtistSearch;
+			sourceTree = "<group>";
+		};
+		155F8D922AF6179900802E80 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				155F8D8F2AF4C76800802E80 /* ItunesClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		155F8D952AF620C800802E80 /* ArtistDetail */ = {
+			isa = PBXGroup;
+			children = (
+				155F8D932AF617D300802E80 /* ArtistDetailView.swift */,
+			);
+			path = ArtistDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +182,9 @@
 			files = (
 				155F8D902AF4C76800802E80 /* ItunesClient.swift in Sources */,
 				155F8D802AF4C13300802E80 /* ArtistSearchView.swift in Sources */,
+				155F8D942AF617D300802E80 /* ArtistDetailView.swift in Sources */,
 				155F8D7E2AF4C13300802E80 /* MusicSearchApp.swift in Sources */,
+				155F8D972AF64AAA00802E80 /* ArtistSearchRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
