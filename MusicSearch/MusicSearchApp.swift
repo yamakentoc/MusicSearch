@@ -12,8 +12,8 @@ import ComposableArchitecture
 struct MusicSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchView(store: Store(initialState: Search.State()) {
-                Search()
+            ArtistSearchView(store: Store(initialState: ArtistSearchReducer.State()) {
+                ArtistSearchReducer()
                     ._printChanges()
             })
         }

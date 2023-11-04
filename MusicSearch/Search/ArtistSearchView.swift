@@ -8,7 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct Search: Reducer {
+struct ArtistSearchReducer: Reducer {
     struct State: Equatable {
         var searchArtistName = ""
         var results: [ArtistSearch.Result] = []
@@ -54,8 +54,8 @@ struct Search: Reducer {
     }
 }
 
-struct SearchView: View {
-    let store: StoreOf<Search>
+struct ArtistSearchView: View {
+    let store: StoreOf<ArtistSearchReducer>
     
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
@@ -67,7 +67,7 @@ struct SearchView: View {
                         }
                     }
                 }
-                .searchable(text: viewStore.binding(get: \.searchArtistName, send: Search.Action.searchArtistNameChanged))
+                .searchable(text: viewStore.binding(get: \.searchArtistName, send: ArtistSearchReducer.Action.searchArtistNameChanged))
             }
             .navigationTitle("Search")
         }
@@ -75,7 +75,7 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(store: Store(initialState: Search.State()) {
-        Search()
+    ArtistSearchView(store: Store(initialState: ArtistSearchReducer.State()) {
+        ArtistSearchReducer()
     })
 }
