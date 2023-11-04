@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct MusicSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView(store: Store(initialState: Search.State()) {
+                Search()
+                    ._printChanges()
+            })
         }
     }
 }
